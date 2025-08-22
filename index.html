@@ -53,53 +53,57 @@
     <div class="profile-about"><b>Leading Uniform Manufacturer in Tamil Nadu</b></div>
 
     <!-- Links-->
-    <a href="http://www.youngstargarments.com/" target="_blank" class="links , hover">
+    <a href="http://www.youngstargarments.com/" target="_blank" class="links , hover" id="link-1">
         <i class="fas fa-link , links-in"></i>
-        <b>Website</b></a>
+        <b>Website</b>
+    </a>
 
-    <a href="tel:+919362333994" target="_blank" class="links , hover">
+    <a href="tel:+919362333994" target="_blank" class="links , hover" id="link-2">
         <i class="fa-solid fa-phone , links-in"></i>
-        <b>Call Us</b></a>
+        <b>Call Us</b>
+    </a>
 
-    <a href="https://maps.app.goo.gl/FA8XSMu7zJW3KZVX8" target="_blank" class="links , hover">
+    <a href="https://maps.app.goo.gl/FA8XSMu7zJW3KZVX8" target="_blank" class="links , hover" id="link-3">
         <i class="fa-solid fa-map-location-dot , links-in"></i>
-        <b>Location</b></a>
+        <b>Location</b>
+    </a>
 
     <a href="https://api.whatsapp.com/send/?phone=919362333994&text&type=phone_number&app_absent=0" target="_blank"
-        class="links , hover">
+        class="links , hover" id="link-4">
         <i class="fab fa-whatsapp , links-in"></i>
-        <b>WhatsApp</b></a>
+        <b>WhatsApp</b>
+    </a>
 
-    <a href="https://t.me/Youngstar_Uniforms" target="_blank" class="links , hover">
+    <a href="https://t.me/Youngstar_Uniforms" target="_blank" class="links , hover" id="link-5">
         <i class="fab fa-telegram , links-in"></i>
-        <b>Telegram</b></a>
+        <b>Telegram</b>
+    </a>
 
     <a href="https://www.youtube.com/watch?v=GaTFgzwpQnY&ab_channel=YoungstarGarments" target="_blank"
-        class="links , hover">
+        class="links , hover" id="link-6">
         <i class="fab fa-youtube , links-in"></i>
-        <b>Youtube</b></a>
+        <b>Youtube</b>
+    </a>
 
-    <a href="https://www.facebook.com/Youngstar.uniforms" target="_blank" class="links , hover">
+    <a href="https://www.facebook.com/Youngstar.uniforms" target="_blank" class="links , hover" id="link-7">
         <i class="fab fa-facebook , links-in"></i>
-        <b>Facebook</b></a>
+        <b>Facebook</b>
+    </a>
 
-
-    <a href="https://www.instagram.com/youngstar_garments/" target="_blank" class="links , hover">
+    <a href="https://www.instagram.com/youngstar_garments/" target="_blank" class="links , hover" id="link-8">
         <i class="fab fa-instagram , links-in"></i>
-        <b>Instagram</b></a>
+        <b>Instagram</b>
+    </a>
 
-    <a href="https://twitter.com/Youngstar_cbe" target="_blank" class="links , hover">
+    <a href="https://twitter.com/Youngstar_cbe" target="_blank" class="links , hover" id="link-9">
         <i class="fab fa-twitter , links-in"></i>
-        <b>Twitter</b></a>
+        <b>Twitter</b>
+    </a>
 
-    <a href="https://www.linkedin.com/company/youngstar-garments/" target="_blank" class="links , hover">
+    <a href="https://www.linkedin.com/company/youngstar-garments/" target="_blank" class="links , hover" id="link-10">
         <i class="fab fa-linkedin , links-in"></i>
-        <b>LinkedIn</b></a>
-
-    
-
-
-
+        <b>LinkedIn</b>
+    </a>
 
     <div class="space"></div>
 
@@ -107,10 +111,28 @@
         <!--bottom text-->
         <a href="http://www.youngstargarments.com/" class="link-hide">
             <div class="bottom-text">
-                © 2023 Youngstar Garments
+                © 2025 Youngstar Garments
             </div>
         </a>
     </footer>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Check if 'id' parameter exists
+        const linkId = getUrlParameter('id');
+        if (linkId) {
+            const linkElement = document.getElementById(`link-${linkId}`);
+            if (linkElement) {
+                // Redirect to the href of the link
+                window.location.href = linkElement.href;
+            }
+        }
+    </script>
 
 </body>
 
